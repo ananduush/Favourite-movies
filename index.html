@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Favourite Movie list</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1>My Favourite Movies</h1>
+
+
+    <table id="myTable" class="table table-striped">
+        <div class="addNewMovie">
+            <span>
+                <div class="addTitle">
+                    Title
+                    <input id="titleIpnut" placeholder="Add your new movie title..." type="text">
+                </div>
+                <div class="addRating">
+                    Rating
+                    <input id="ratingInput" placeholder="Add your movie's rating..." type="text">
+                    <button class="my_button" type="submit" onclick="addMovie()">Add Movie</button>
+                </div>
+            </span>
+
+        </div>
+        <thead>
+            <tr id="myTitles">
+                <th scope="col" id="title">Title</th>
+                <th scope="col" id="rating">Rating</th>
+                <th scope="col" id="delete">Delete</th>
+            </tr>
+        </thead>
+        <tr>
+            <td id="placeHolder">No movies? Either you're a really boring person or you're just lazy</td>
+            <td id="rating">0</td>
+            <td id="delete">
+                <button class="delete_button" type="submit">Delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td id="placeHolder">Bojack Horseman</td>
+            <td id="rating">5</td>
+            <td id="delete">
+                <button class="delete_button" type="submit">Delete</button>
+            </td>
+        </tr>
+
+    </table>
+
+
+
+</body>
+<script src="script.js"></script>
+
+</html>

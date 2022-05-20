@@ -1,0 +1,78 @@
+h1 {
+    text-align: center;
+    padding-top: 10vh;
+    padding-bottom: 7vh;
+}
+
+html {
+    max-width: 120vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+input {
+    width: 35vh;
+    border-width: 1px 1px;
+    outline: none;
+    padding: 4px 5px;
+    /* box: rgb(248, 248, 248) ; */
+    border-radius: 5px;
+    box-sizing: border-box;
+    border: 1px solid rgb(199, 199, 199);
+}
+
+table {
+    margin-top: 25px;
+}
+
+span {
+    display: flex;
+    margin-top: 25px;
+}
+
+#title {
+    width: 50%;
+}
+
+#rating,
+#delete {
+    text-align: center;
+    width: 25%;
+}
+
+::placeholder {
+    font-size: 14px;
+}
+
+.addRating {
+    margin-left: 100px;
+}
+
+#placeHolder {
+    color: grey;
+}
+
+.my_button {
+    margin-left: 5vh;
+}
+
+.my_button,
+.delete_button {
+    background-color: rgb(153, 99, 192);
+    color: white;
+    border: 0px;
+    border-radius: 6px;
+    box-shadow: 0 3px rgb(207, 131, 223);
+}
+
+.my_button:hover,
+.delete_button:hover {
+    background-color: rgb(133, 54, 189);
+}
+
+.my_button:active,
+.delete_button:active {
+    transform: translateY(3px);
+    box-shadow: 0 0px lavender;
+}
