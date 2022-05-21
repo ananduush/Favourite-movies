@@ -31,12 +31,26 @@ span {
     margin-top: 25px;
 }
 
+#ratingHeader,
+#deleteHeader {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
 #title {
     width: 50%;
 }
 
 #titleHeader {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#titleHeader div {
     text-align: center;
+    padding-right: 5px;
 }
 
 #rating,
@@ -47,8 +61,13 @@ span {
     width: 25%;
 }
 
-::placeholder {
-    font-size: 14px;
+#ratingHeader,
+#deleteHeader {
+    vertical-align: middle;
+}
+
+#myTitles {
+    text-align: center;
 }
 
 .addRating {
@@ -60,7 +79,9 @@ span {
 }
 
 .my_button,
-.delete_button {
+.delete_button,
+.ascButton,
+.descButton {
     background-color: rgb(153, 99, 192);
     color: white;
     border: 0px;
@@ -69,7 +90,9 @@ span {
 }
 
 .my_button:hover,
-.delete_button:hover {
+.delete_button:hover,
+.ascButton:hover,
+.descButton:hover {
     background-color: rgb(133, 54, 189);
 }
 
@@ -77,4 +100,18 @@ span {
 .delete_button:active {
     transform: translateY(3px);
     box-shadow: 0 0px lavender;
+}
+
+.ascButton,
+.descButton {
+    border-radius: 2px;
+    display: flex;
+    width: 15px;
+    height: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+#sortButtons button {
+    margin: 5px;
 }
