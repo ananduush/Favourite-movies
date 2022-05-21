@@ -1,9 +1,25 @@
-function addMovie() {
-    var table = document.querySelector("table");
-    var row = table.insertRow(0);
-    var cell1 = row.insertCell(0);
-    var cell2 = row.insertCell(1);
-    cell1.innerHTML = document.getElementById("titleInput");
-    cell1.innerHTML = document.getElementById("ratingInput");
+const table = document.querySelector("table");
+const titleInput = document.querySelector("#titleInput");
+const ratingInput = document.querySelector("#ratingInput");
 
+function addMovie() {
+    var title = titleInput.value;
+    var rating = ratingInput.value;
+
+    var template = `
+    <tr>
+        <td id="title">${title}</td>
+        <td id="rating">${rating}</td>
+        <td id="delete">
+            <button onclick="deleteMovie(this)" class="delete_button" type="submit">Delete</button>
+        </td>
+    </tr>`
+
+    table.innerHTML += template;
+}
+
+function deleteMovie(ele) {
+    let tr = ele.parentNode.parentNode;
+    let tb = tr.parentNode
+    tb.removeChild(tr)
 }

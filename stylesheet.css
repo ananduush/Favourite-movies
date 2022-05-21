@@ -35,8 +35,14 @@ span {
     width: 50%;
 }
 
+#titleHeader {
+    text-align: center;
+}
+
 #rating,
-#delete {
+#delete,
+#deleteHeader,
+#ratingHeader {
     text-align: center;
     width: 25%;
 }
@@ -47,10 +53,6 @@ span {
 
 .addRating {
     margin-left: 100px;
-}
-
-#placeHolder {
-    color: grey;
 }
 
 .my_button {

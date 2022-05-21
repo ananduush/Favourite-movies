@@ -14,12 +14,12 @@
     <h1>My Favourite Movies</h1>
 
 
-    <table id="myTable" class="table table-striped">
+    <table id="myTable" class="table">
         <div class="addNewMovie">
             <span>
                 <div class="addTitle">
                     Title
-                    <input id="titleIpnut" placeholder="Add your new movie title..." type="text">
+                    <input id="titleInput" placeholder="Add your new movie title..." type="text">
                 </div>
                 <div class="addRating">
                     Rating
@@ -31,23 +31,23 @@
         </div>
         <thead>
             <tr id="myTitles">
-                <th scope="col" id="title">Title</th>
-                <th scope="col" id="rating">Rating</th>
-                <th scope="col" id="delete">Delete</th>
+                <th id="titleHeader">Title</th>
+                <th id="ratingHeader">Rating</th>
+                <th id="deleteHeader">Delete</th>
             </tr>
         </thead>
         <tr>
-            <td id="placeHolder">No movies? Either you're a really boring person or you're just lazy</td>
+            <td id="title">No movies? Either you're a really boring person or you're just lazy</td>
             <td id="rating">0</td>
             <td id="delete">
-                <button class="delete_button" type="submit">Delete</button>
+                <button class="delete_button" onclick="deleteMovie(this)" type="submit">Delete</button>
             </td>
         </tr>
         <tr>
-            <td id="placeHolder">Bojack Horseman</td>
+            <td id="title">Bojack Horseman</td>
             <td id="rating">5</td>
             <td id="delete">
-                <button class="delete_button" type="submit">Delete</button>
+                <button class="delete_button" onclick="deleteMovie()" type="submit">Delete</button>
             </td>
         </tr>
 
