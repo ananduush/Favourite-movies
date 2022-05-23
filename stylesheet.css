@@ -22,10 +22,6 @@ input {
     border: 1px solid rgb(199, 199, 199);
 }
 
-table {
-    margin-top: 25px;
-}
-
 span {
     display: flex;
     margin-top: 25px;
@@ -41,41 +37,37 @@ span {
     width: 50%;
 }
 
-#titleHeader {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
+#titleHeader div,
+#ratingHeader div {
+    display: inline-block;
 }
 
-#titleHeader div {
+#titleHeader,
+#ratingHeader {
     text-align: center;
     padding-right: 5px;
 }
 
 #rating,
 #delete,
-#deleteHeader,
-#ratingHeader {
+#deleteHeader {
     text-align: center;
     width: 25%;
 }
 
-#ratingHeader,
+#titleHeader div,
+#ratingHeader div,
 #deleteHeader {
     vertical-align: middle;
 }
 
-#myTitles {
-    text-align: center;
+#sortButtons button {
+    margin: 5px;
 }
 
-.addRating {
-    margin-left: 100px;
-}
-
+.addRating,
 .my_button {
-    margin-left: 5vh;
+    margin-left: 100px;
 }
 
 .my_button,
@@ -97,7 +89,9 @@ span {
 }
 
 .my_button:active,
-.delete_button:active {
+.delete_button:active,
+.ascButton:active,
+.descButton:active {
     transform: translateY(3px);
     box-shadow: 0 0px lavender;
 }
@@ -110,8 +104,4 @@ span {
     height: 15px;
     justify-content: center;
     align-items: center;
-}
-
-#sortButtons button {
-    margin: 5px;
 }
