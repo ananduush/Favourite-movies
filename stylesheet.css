@@ -37,6 +37,15 @@ span {
     width: 50%;
 }
 
+#titleHeader {
+    width: 50%;
+}
+
+#ratingHeader,
+#deleteHeader {
+    width: 25%;
+}
+
 #titleHeader div,
 #ratingHeader div {
     display: inline-block;

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheet.css">
     <title>Favourite Movie list</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/5a9803318f.js" crossorigin="anonymous"></script>
 
@@ -26,7 +27,7 @@
                 </div>
                 <div class="addRating">
                     Rating
-                    <input id="ratingInput" placeholder="Add your movie's rating..." type="text">
+                    <input id="ratingInput" placeholder="Add your movie's rating..." type="number">
                     <button class="my_button" type="submit" onclick="addMovie()">Add Movie</button>
                 </div>
             </span>
@@ -34,18 +35,17 @@
         </div>
         <thead>
             <tr id="myTitles">
-                <th id="titleHeader">
+                <th data-column="titles" data-order="desc" id="titleHeader">
                     <div>Title</div>
                     <div id="sortButtons">
-                        <button class="ascButton"><i class="fas fa-angle-up"></i></button>
-                        <button class="descButton"><i class="fas fa-angle-down"></i></button>
+                        <button class="ascButton" data-column='titles' onclick="sortTitle('titles')"><i class="fas fa-angle-up"></i></button>
                     </div>
                 </th>
-                <th id="ratingHeader">
+                <th data-column="ratings" data-order="desc" id="ratingHeader">
                     <div>Rating</div>
                     <div id="sortButtons">
-                        <button class="ascButton"><i class="fas fa-angle-up"></i></button>
-                        <button class="descButton"><i class="fas fa-angle-down"></i></button>
+                        <button class="ascButton" data-column='ratings' onclick="sortTitle('rating')"><i class="fas fa-angle-up"></i></button>
+
                     </div>
                 </th>
 
@@ -53,21 +53,29 @@
             </tr>
 
         </thead>
-        <tr>
-            <td id="title">No movies? Either you're a really boring person or you're just lazy</td>
-            <td id="rating">0</td>
-            <td id="delete">
-                <button class="delete_button" onclick="deleteMovie(this)" type="submit">Delete</button>
-            </td>
-        </tr>
-        <tr>
-            <td id="title">Bojack Horseman</td>
-            <td id="rating">5</td>
-            <td id="delete">
-                <button class="delete_button" onclick="deleteMovie(this)" type="submit">Delete</button>
-            </td>
-        </tr>
-
+        <tbody id="table">
+            <tr>
+                <td id="title">Come again</td>
+                <td id="rating">3</td>
+                <td id="delete">
+                    <button class="delete_button" onclick="deleteMovie(this)" type="submit">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td id="title">No movies? Either you're a really boring person or you're just lazy</td>
+                <td id="rating">0</td>
+                <td id="delete">
+                    <button class="delete_button" onclick="deleteMovie(this)" type="submit">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td id="title">Bojack Horseman</td>
+                <td id="rating">5</td>
+                <td id="delete">
+                    <button class="delete_button" onclick="deleteMovie(this)" type="submit">Delete</button>
+                </td>
+            </tr>
+        </tbody>
     </table>
 
 
